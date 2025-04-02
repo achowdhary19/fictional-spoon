@@ -8,7 +8,13 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   base: '/fictional-spoon/',
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('a-') // Tells Vue to treat elements starting with 'a-' as custom elements
+        }
+      }
+    }),
     vueDevTools(),
   ],
   resolve: {
