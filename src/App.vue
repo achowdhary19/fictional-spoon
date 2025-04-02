@@ -77,6 +77,8 @@ import bunnies from "@/assets/bunniesinsnow.png";
 import overlay from "@/assets/overlay.png";
 import cows from "@/assets/cows.png";
 import panorama from "@/assets/trees.jpeg";
+import { RouterLink, RouterView } from "vue-router";
+
 
 import Tabs from "./components/Tabs.vue";
 import Form from "./components/Form.vue";
