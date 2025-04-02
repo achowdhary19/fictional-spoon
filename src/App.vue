@@ -7,7 +7,7 @@ Other components are usually imported and used inside App.vue.
   <!-- router link is the comopnent for enabling user navigation in a router enabled app -->
   <router-link to="/">App</router-link>
   <router-link to="/home">Home</router-link>
-  <router-link to="/about" target="_blank">About</router-link>
+  <router-link to="/about">About</router-link>
 
   <div id="app" class="indigo bound centermycontent">
     <Tabs></Tabs>
