@@ -7,7 +7,9 @@ Other components are usually imported and used inside App.vue.
  
 
   <div id="" class="indigo bound centermycontent">
+
     <Tabs></Tabs>
+
 
 
     <div class="app-grid main red">

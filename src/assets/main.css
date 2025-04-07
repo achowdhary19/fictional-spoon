@@ -223,6 +223,7 @@ a {
   border: 2px solid #808080; /* Dark gray border */
   color: black;
   cursor: grab;
+  z-index: 100;
 
   /* 3D effect using border colors */
   border-top-color: #545454; /* Light top edge */
