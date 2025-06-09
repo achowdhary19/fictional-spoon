@@ -50,26 +50,16 @@
   border: solid 1.5px indigo;
 }
 
-.starsdiv {
-  height: 3.5vh;
-}
-.star {
-  width: 5vw;
-  /* box-shadow: 2px 2px 12px red; */
-}
-
-.halo {
-  border-radius: 20px;
-  box-shadow: 0px 0px 3px 5px lightblue;
-}
-.add-button {
-  font-style: normal;
-  font-size: 15px;
-  margin-bottom: 2px;
-  color: black;
-}
-
 /* general  */
+.prev, .next{
+  position:absolute;
+  bottom:0;
+  margin: 0 0 2vh 40px; 
+}
+.next{
+  right:0;
+  margin: 0 40px 2vh 0px; 
+}
 body {
   min-height: 100vh;
   -webkit-font-smoothing: auto;
@@ -78,7 +68,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: Roboto, sans-serif;
   background-color: #c6ccdf;
-  background-image: url("coffee.jpg");
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
@@ -86,111 +75,31 @@ body {
 .d-flex {
   display: flex;
 }
-.app-grid {
-  display: grid;
-  width: 100%;
-  place-items: center; /* Centers child (main) both horizontally & vertically */
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(30, 1fr);
-}
 .display-grid {
   display: grid;
 }
-.row-of-stars {
-  grid-column: 1 / 21;
-  grid-row: 0/2;
-  display: flex; /* for inner layout */
-  align-items: center; /* y axis center */
-  height: 4vh; /* control height of div / imgs  */
-  width: 100%; /* override the default width auto */
-}
-
-/* perfect fit 
-.row-of-stars img {
-  max-height: 100%;
-  width: auto;
-}
-*/
-
-/* distorted */
-.row-of-stars img {
-  width: 100%; /* Forces each image to stretch unnaturally wide */
-  height: 100%; /* Makes sure it fully fills the shrinking div */
-  object-fit: fill; /* Forces distortion: stretches both width and height */
-}
-.row-of-stars img {
-  flex: 1; /* Makes each image fight for equal space */
-  height: 100%;
-  object-fit: fill; /* Forces distortion */
-}
-
-.row-of-birds {
-  grid-column: 1/21;
-  grid-row: 2/10;
-  width: 100%;
-  align-items: flex-end; /* y axis center */
-  display: grid;
-  grid-template-columns: repeat(22, 1fr);
-  gap: 8px;
-}
-.twobirdsdiv {
-  /* width: 15vw; */
-  grid-column: 1/11;
-}
-.twobirds img {
-  width: 100%;
-}
-.halo {
+.rounded-corners{
   border-radius: 20px;
-  box-shadow: 0px 0px 3px 5px lightblue;
-}
-
-#form {
-  grid-column: 11/14;
-}
-#world {
-  grid-column: 14/23;
-  height: 8vw; /* Set desired height */
-  border: 2px solid black; /* Just to visualize the container */
   overflow: hidden;
-  position: relative;
-  cursor: default;
-}
-a-scene {
-  width: 100%;
-  height: 100%;
-  position: relative !important; /* Override A-Frame's default absolute positioning */
-  cursor: default;
 }
 
-.row-of-bunnies {
-  grid-column: 1/21;
-  grid-row: 8/14;
-  display: flex;
-  width: 100%;
-  /* justify-content: center; */
-  height: 10vh;
-  overflow: hidden;
-  border-radius: 25px;
+.app-grid {
+  display: grid;
+  grid-gap: 5px;
+  min-height: 0;  /* NEW */
+  min-width: 0; 
+  height: 100vh;
+  border: grey solid .75px;
+  place-items: center; /* Centers child (main) both horizontally & vertically */
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  /* align-content: start; */
 }
 
-.row-of-bunnies img {
-  max-height: 100%;
-  width: auto;
-}
-.row-of-cows {
-  grid-column: 1/21;
-  grid-row: 8/21;
-  width: 100%;
-  height: 16vw;
-  overflow: hidden;
-
-  border-radius: 25px;
-}
-.row-of-cows img {
-  width: 100%;
-  object-position: 0% -19vw;
-  height: auto;
+.item {
+  display: grid;
+  place-items: center;
+  outline: 1px dashed grey;
 }
 
 .justify-content-between {
@@ -209,9 +118,29 @@ a-scene {
 .flex-column {
   flex-direction: column;
 }
+
 a {
   text-decoration: none !important;
 }
+
+.halo {
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 5px lightblue;
+}
+
+.add-button {
+  font-style: normal;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: black;
+}
+a-scene {
+  width: 100%;
+  height: 100%;
+  position: relative !important; /* Override A-Frame's default absolute positioning */
+  cursor: default;
+}
+
 
 /* end of general  */
 
@@ -241,24 +170,15 @@ a {
 }
 
 .main {
-  width: 40vw;
+  width: 70vh;
   /* padding: 10px; */
   /* margin-top: 3vh; */
 }
 
-.margin-left {
-  margin-left: 0.5vw;
-}
 
 .box {
   width: 70px;
   /* height: 60px; */
-}
-
-.poem-holder {
-  /* #9eedbc; */
-  height: 24vh;
-  object-position: 0% -300px;
 }
 
 .rounded {
@@ -280,9 +200,7 @@ a {
   position: relative;
 }
 
-.bunnies {
-  object-fit: cover;
-}
+
 
 .leftRound {
   border-radius: 20px 0px 0px 20px;

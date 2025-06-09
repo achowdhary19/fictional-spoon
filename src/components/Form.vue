@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { vDraggable } from "@neodrag/vue";
-import "../assets/main.css";
+import "@/assets/main.css";
 
 const newItem2 = ref("");
 const words2 = ref([]);
@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
           What are you trying to say?
           <a @click="handleSubmit">↵</a>
         </label>
-        <input v-model="newItem2" type="text" id="item" />
+        <input @keydown.enter="handleSubmit" v-model="newItem2" type="text" id="item" />
       </div>
     </form>
 
@@ -47,4 +47,10 @@ const handleSubmit = (e) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+input{
+  padding: 3px;
+  font-size: 13px;
+  font-family: Helvetica, 'Times New Roman', Times, serif;
+}
+</style>
