@@ -54,11 +54,11 @@
 .prev, .next{
   position:absolute;
   bottom:0;
-  margin: 0 0 2vh 40px; 
+  margin: 0 0 2vh 40px;
 }
 .next{
   right:0;
-  margin: 0 40px 2vh 0px; 
+  margin: 0 40px 2vh 0px;
 }
 body {
   min-height: 100vh;
@@ -79,7 +79,7 @@ body {
   display: grid;
 }
 .rounded-corners{
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -87,7 +87,7 @@ body {
   display: grid;
   grid-gap: 5px;
   min-height: 0;  /* NEW */
-  min-width: 0; 
+  min-width: 0;
   height: 100vh;
   border: grey solid .75px;
   place-items: center; /* Centers child (main) both horizontally & vertically */
@@ -96,10 +96,11 @@ body {
   /* align-content: start; */
 }
 
+
 .item {
   display: grid;
   place-items: center;
-  outline: 1px dashed grey;
+  /* outline: 1px dashed grey; */
 }
 
 .justify-content-between {
@@ -175,6 +176,9 @@ a-scene {
   /* margin-top: 3vh; */
 }
 
+.flowers-main{
+  width: 80vh;
+}
 
 .box {
   width: 70px;
